@@ -16,8 +16,12 @@ const ImageLinkForm = ({onInputChange,onButtonSubmit}) => {
                     onClick={onButtonSubmit}>Detect</button> 
                 </div>
 
-                
             </div>
+
+            <p className="courier washed-red shadow-2 pa2 ">
+                {'Here is a picture to help you get started!'}<br />
+                {'https://i.imgur.com/ZINR6jY.jpg'}
+            </p>
         </div>
     )
 }
