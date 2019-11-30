@@ -2,7 +2,7 @@
   "name": "facerecognitionbrain",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hashelse.github.io/facedetect",
+  "homepage": "https://nidhishdb.github.io/facedetect",
   "dependencies": {
     "clarifai": "^2.9.0",
     "gh-pages": "^2.0.1",
