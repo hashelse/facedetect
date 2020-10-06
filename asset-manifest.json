@@ -1,15 +1,15 @@
 {
-  "main.css": "/facedetect/static/css/main.3289ed75.chunk.css",
-  "main.js": "/facedetect/static/js/main.8b34eeff.chunk.js",
-  "main.js.map": "/facedetect/static/js/main.8b34eeff.chunk.js.map",
+  "main.css": "/facedetect/static/css/main.12975c98.chunk.css",
+  "main.js": "/facedetect/static/js/main.59f0db08.chunk.js",
+  "main.js.map": "/facedetect/static/js/main.59f0db08.chunk.js.map",
   "static/css/1.0a87fe3a.chunk.css": "/facedetect/static/css/1.0a87fe3a.chunk.css",
   "static/js/1.173b6711.chunk.js": "/facedetect/static/js/1.173b6711.chunk.js",
   "static/js/1.173b6711.chunk.js.map": "/facedetect/static/js/1.173b6711.chunk.js.map",
   "runtime~main.js": "/facedetect/static/js/runtime~main.862a8f25.js",
   "runtime~main.js.map": "/facedetect/static/js/runtime~main.862a8f25.js.map",
-  "static/css/main.3289ed75.chunk.css.map": "/facedetect/static/css/main.3289ed75.chunk.css.map",
+  "static/css/main.12975c98.chunk.css.map": "/facedetect/static/css/main.12975c98.chunk.css.map",
   "static/css/1.0a87fe3a.chunk.css.map": "/facedetect/static/css/1.0a87fe3a.chunk.css.map",
   "index.html": "/facedetect/index.html",
-  "precache-manifest.3a798829e16d5e2609aee5dbf348e1f6.js": "/facedetect/precache-manifest.3a798829e16d5e2609aee5dbf348e1f6.js",
+  "precache-manifest.528dfe91f6582c1642e45fbdec00feb7.js": "/facedetect/precache-manifest.528dfe91f6582c1642e45fbdec00feb7.js",
   "service-worker.js": "/facedetect/service-worker.js"
 }
