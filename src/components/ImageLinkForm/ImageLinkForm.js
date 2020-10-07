@@ -4,8 +4,8 @@ import './ImageLinkForm.css';
 const ImageLinkForm = ({onInputChange,onButtonSubmit}) => {
     return (
         <div className="ma0 mt0">
-            <p className="f3 courier washed-red shadow-2 pa2 ">
-                {'FaceDetect can detect face in pictures'}<br />
+            <p className="f3 courier white shadow-2 b--dashed b--white-10 pa4 ">
+                {'FaceDetect performs face recognition in images'}<br />
                 {'Enter URL of image and hit detect'}
             </p>
             <div className="center" style={{clear:'both'}}>
@@ -18,8 +18,8 @@ const ImageLinkForm = ({onInputChange,onButtonSubmit}) => {
 
             </div>
 
-            <p className="courier washed-red shadow-2 pa2 ">
-                {'Here is a picture to help you get started!'}<br />
+            <p className="courier lightest-blue pa3 ">
+                {'Here is a image to help you get started!'}<br />
                 {'https://i.imgur.com/ZINR6jY.jpg'}
             </p>
         </div>
