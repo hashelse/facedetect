@@ -1,10 +1,10 @@
 import React from 'react';
 import './ImageLinkForm.css';
 
-const ImageLinkForm = ({onInputChange,onButtonSubmit}) => {
+const ImageLinkForm = ({tags,onInputChange,onButtonSubmit}) => {
     return (
         <div className="ma0 mt0">
-            <p className="f3 courier white shadow-2 b--dashed b--white-10 pa4 ">
+            <p className="br4 f3 courier white shadow-2 b--dashed b--white-10 pa4 ">
                 {'FaceDetect performs face recognition in images'}<br />
                 {'Enter URL of image and hit detect'}
             </p>
@@ -20,9 +20,18 @@ const ImageLinkForm = ({onInputChange,onButtonSubmit}) => {
 
             <p className="courier lightest-blue pa3 ">
                 {'Here is a image to help you get started!'}<br />
-                {'https://i.imgur.com/ZINR6jY.jpg'}
+                {'https://i.imgur.com/ZINR6jY.jpg'}<br />
             </p>
+	    {(tags.length !== 0)?
+	    <div className="br4 b--dashed shadow-1 b--white-20">
+	    <p className="courier gold">Predictions:</p>
+	    <p className="courier">{tags[0]}</p>
+	    <p className="courier">{tags[1]}</p>
+	    <p className="courier">{tags[2]}</p>
+	    </div>:<div></div>
+	    }
         </div>
+	    
     )
 }
 

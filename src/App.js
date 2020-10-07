@@ -15,6 +15,10 @@ const app = new Clarifai.App({
   apiKey: 'eef8f175ea6c4f259bdc9f230e44592a'
 });
 
+const newapp = new Clarifai.App({
+  apiKey: '3e979f3355a1424280e2a695ceee668e'
+});
+
 const particlesOptions = {
   "particles": {
     "number": {
@@ -135,13 +139,14 @@ class App extends Component {
       box: "",
       route: "signin",
       isSignedIn: false,
+      tags: [] ,
       user:{
         id: '',
         name:'',
         email:'',
         entries:0,
         joined:''
-      }
+      },
     }
   }
 
@@ -177,9 +182,28 @@ class App extends Component {
   displayFaceBox = (box) => {
     this.setState({box:box});
   }
+ 
+  getTags = (res) => {
+   //console.log(res)
+   const tags = [];
+   tags[0] = res.outputs[0].data.concepts[0].name; //todo
+   tags[1] = res.outputs[0].data.concepts[1].name; //todo
+   tags[2] = res.outputs[0].data.concepts[2].name; //todo
+   tags[3] = res.outputs[0].data.concepts[3].name; //todo
+   tags[4] = res.outputs[0].data.concepts[4].name; //todo
+   tags[5] = res.outputs[0].data.concepts[5].name; //todo
+
+   this.setState({tags:tags});
+
+	  //console.log(tags)
+  }
 
   onButtonSubmit = () => {
   this.setState({imageUrl:this.state.input});  
+    newapp.models.predict(Clarifai.GENERAL_MODEL,this.state.input)
+    .then(res => {
+	    this.getTags(res)
+    })
     app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
     .then(response => {
       if (response){
@@ -223,7 +247,7 @@ class App extends Component {
             <Rank name={this.state.user.name} entries={this.state.user.entries}/> 
 
 
-            <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>     <FaceRecognition box={box} imageUrl={imageUrl}/>
+            <ImageLinkForm tags={this.state.tags} onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>     <FaceRecognition  box={box} imageUrl={imageUrl}/>
           </div> 
         : (route === 'signin') ?
         <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/> :
