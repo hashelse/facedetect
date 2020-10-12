@@ -198,8 +198,18 @@ class App extends Component {
 	  //console.log(tags)
   }
 
+
   onButtonSubmit = () => {
   this.setState({imageUrl:this.state.input});  
+   
+        fetch('https://glacial-citadel-57336.herokuapp.com/processimage',{
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+              data: this.state.input
+          })
+        }).then(response => response.json()).then(res => {console.log(res.data)})
+
     newapp.models.predict(Clarifai.GENERAL_MODEL,this.state.input)
     .then(res => {
 	    this.getTags(res)
