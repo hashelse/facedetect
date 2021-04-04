@@ -1,6 +1,7 @@
 import React from 'react';
 import './ImageLinkForm.css';
 
+
 const ImageLinkForm = ({tags,onInputChange,onButtonSubmit}) => {
     return (
         <div className="ma0 mt0">
@@ -30,6 +31,15 @@ const ImageLinkForm = ({tags,onInputChange,onButtonSubmit}) => {
 	    <p className="courier">{tags[2]}</p>
 	    </div>:<div></div>
 	    }
+
+        <div>
+            <a href="https://nidhishdb.github.io/currency/" className="f6 link 
+            dim br-pill ph3 pv2 mb2 dib white bg-dark-blue">
+                Currency Detection</a>
+            
+            
+        </div>
+
         </div>
 	    
     )

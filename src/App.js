@@ -137,7 +137,7 @@ class App extends Component {
       input : "",
       imageUrl : "",
       box: "",
-      route: "signin",
+      route: "home",
       isSignedIn: false,
       tags: [] ,
       user:{
@@ -200,14 +200,14 @@ class App extends Component {
 
   onButtonSubmit = () => {
   this.setState({imageUrl:this.state.input});  
-    newapp.models.predict(Clarifai.GENERAL_MODEL,this.state.input)
+    /*newapp.models.predict(Clarifai.GENERAL_MODEL,this.state.input)
     .then(res => {
 	    this.getTags(res)
     })
     app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
     .then(response => {
       if (response){
-        fetch('https://mighty-fjord-55698.herokuapp.com/image',{
+	  fetch('https://mighty-fjord-55698.herokuapp.com/image',{
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -219,8 +219,9 @@ class App extends Component {
           })
       }
       this.displayFaceBox(this.calculateFaceLocation(response))}
-    )
-    .catch(err => console.log(err));
+    ) 
+    .catch(err => console.log(err)); 
+    */
 
   }
 
