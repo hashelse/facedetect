@@ -137,7 +137,7 @@ class App extends Component {
       input : "",
       imageUrl : "",
       box: "",
-      route: "home",
+      route: "signin",
       isSignedIn: false,
       tags: [] ,
       user:{
@@ -200,7 +200,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
   this.setState({imageUrl:this.state.input});  
-    /*newapp.models.predict(Clarifai.GENERAL_MODEL,this.state.input)
+    newapp.models.predict(Clarifai.GENERAL_MODEL,this.state.input)
     .then(res => {
 	    this.getTags(res)
     })
@@ -221,7 +221,7 @@ class App extends Component {
       this.displayFaceBox(this.calculateFaceLocation(response))}
     ) 
     .catch(err => console.log(err)); 
-    */
+    
 
   }
 
